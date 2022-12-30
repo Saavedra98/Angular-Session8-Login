@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
+  usuario = 'Angular'
+  password = "123456"
+
+  items = ['Home', 'Support', 'Contact']
+
+  verificar(usuarioInput: String, passwordInput:String){
+
+  }
 
 }

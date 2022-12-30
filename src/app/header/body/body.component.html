@@ -5,13 +5,32 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Usuario:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" #usuarioInput  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" #passwordInput class="form-control" id="exampleInputPassword1">
               </div>
-          <a href="#" class="btn btn-primary">Login</a>
+          <a href="#" (click)="verificar(usuarioInput.value, passwordInput.value)" class="btn btn-outline-primary">Login</a>
+
+              
+          <div class="bienvenido">
+            <h1 class="text-success">Bienvenido usuario: {{usuario}}</h1>
+            <ul>
+                <div *ngFor="let nom of items">
+                    <li>{{nom}}</li>
+                </div>
+            </ul>
+          </div>
+
+          <div class="rechazado">
+            <h1 class="text-danger">Credenciales incorrectas, intentelo nuevamente.</h1>
+          </div>
+
+
+
+
+
         </div>
       </div>
 
