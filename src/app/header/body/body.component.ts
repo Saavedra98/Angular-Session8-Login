@@ -20,7 +20,6 @@ export class BodyComponent {
       (this.aceptado = true);
       this.rechazado=false;
     }else{
-      // alert("rechazado")
       (this.rechazado = true);
       this.aceptado=false;
     }
