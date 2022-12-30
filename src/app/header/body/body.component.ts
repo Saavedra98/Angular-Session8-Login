@@ -13,6 +13,12 @@ export class BodyComponent {
 
   verificar(usuarioInput: String, passwordInput:String){
 
+    if (usuarioInput == this.usuario && passwordInput == this.password) {
+      alert("bienvenido")
+    }else{
+      alert("rechazado")
+    }
+
   }
 
 }
