@@ -11,19 +11,18 @@
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" #passwordInput class="form-control" id="exampleInputPassword1">
               </div>
-          <a href="#" (click)="verificar(usuarioInput.value, passwordInput.value)" class="btn btn-outline-primary">Login</a>
+          <a   href="#" (click)="verificar(usuarioInput.value, passwordInput.value)" class="btn btn-outline-primary">Login</a>
 
               
-          <div class="bienvenido">
+          <div class="bienvenido" *ngIf="aceptado == true">
             <h1 class="text-success">Bienvenido usuario: {{usuario}}</h1>
-            <ul>
-                <div *ngFor="let nom of items">
-                    <li>{{nom}}</li>
+
+                <div class="items" *ngFor="let nom of items">
+                    <a>{{nom}}</a>
                 </div>
-            </ul>
           </div>
 
-          <div class="rechazado">
+          <div class="rechazado" *ngIf="rechazado == true">
             <h1 class="text-danger">Credenciales incorrectas, intentelo nuevamente.</h1>
           </div>
 
